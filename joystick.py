@@ -10,8 +10,19 @@ f = (255, 0, 0)
 
 
 
-def arrow_pattern():
-    up = [
+right_arrow = [
+    b, b, b, b, b, b, b, b,
+    b, b, b, b, b, b, b, b,
+    b, b, b, b, f, b, b, b,
+    b, b, b, b, b, f, b, b,
+    b, f, f, f, f, f, f, b,  # Right arrow
+    b, b, b, b, b, f, b, b,
+    b, b, b, b, f, b, b, b,
+    b, b, b, b, b, b, b, b
+
+]
+
+up_arrow = [
         b, b, b, b, b, b, b, b,
         b, b, b, f, b, b, b, b,
         b, b, f, f, f, b, b, b,
@@ -22,11 +33,6 @@ def arrow_pattern():
         b, b, b, b, b, b, b, b]
 
 
-    return up
-
-
-pixels = arrow_pattern()
-
 while True:
     # go throw all joystick’s events
     for event in sense.stick.get_events():
@@ -34,20 +40,18 @@ while True:
 
         if event.action == "pressed":
             # Check which direction
-            sense.set_rotation(0)
 
             if event.direction == "up":
-                sense.set_pixels(pixels)
+                sense.set_pixels(up_arrow)
             elif event.direction == "down":
-                sense.set_pixels(pixels)
+                sense.set_pixels(up_arrow)
                 sense.flip_v()
             elif event.direction == "left":
-                sense.set_rotation(270)
-                sense.set_pixels(pixels)
+                sense.set_pixels(right_arrow)
+                sense.flip_h()
             elif event.direction == "right":
-                sense.set_rotation(90)
-                sense.set_pixels(pixels)
-                sense.flip_h()# Right arrow
+                sense.set_pixels(right_arrow)
+
 
 
 

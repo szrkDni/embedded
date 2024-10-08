@@ -24,9 +24,9 @@ def blinking_hearth():
 
     while True:
         sense.set_pixels(hearth)
-        sleep(.5)
+        sleep(.25)
         sense.clear()
-        sleep(.5)
+        sleep(.25)
         count = count +1
 
 
