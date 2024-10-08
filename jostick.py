@@ -3,6 +3,7 @@ from sense_hat import SenseHat
 
 sense = SenseHat()
 
+sense.clear()
 b = (0, 0, 0)
 f = (255, 0, 0)
 
@@ -42,7 +43,7 @@ while True:
                 sense.set_rotation(270)
                 sense.set_pixels(pixels)
             elif event.direction == "right":
-                sense.set_rotation(270)
+                sense.set_rotation(90)
                 sense.set_pixels(pixels)
                 sense.flip_h()# Right arrow
 

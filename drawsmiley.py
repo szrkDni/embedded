@@ -4,6 +4,7 @@ import random
 sense = SenseHat()
 
 
+sense.clear()
 def random_colour():
 # randint - random integer between an interval
    random_red = random.randint(0, 255)

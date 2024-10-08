@@ -3,6 +3,7 @@ from sense_hat import SenseHat
 
 sense = SenseHat()
 
+sense.clear()
 
 # Define the functions
 def blinking_hearth():
@@ -21,7 +22,7 @@ def blinking_hearth():
 
     count = 0
 
-    while count < 10: #For some reason if it was while True: it didnt stop, neither if the program already did
+    while True:
         sense.set_pixels(hearth)
         sleep(1)
         sense.clear()

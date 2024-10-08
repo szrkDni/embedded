@@ -2,6 +2,7 @@ from sense_hat import SenseHat
 
 sense = SenseHat()
 
+sense.clear()
 w = (255, 255, 255) # white
 b = (0, 0, 255) # blue
 
