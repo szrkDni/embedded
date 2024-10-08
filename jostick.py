@@ -8,6 +8,17 @@ b = (0, 0, 0)
 f = (255, 0, 0)
 
 
+right_arrow = [
+    b, b, b, b, b, b, b, b,
+    b, b, b, b, f, b, b, b,
+    b, b, b, b, b, f, b, b,
+    b, f, f, f, f, f, f, b,  # Up arrow
+    b, b, b, b, b, f, b, b,
+    b, b, b, b, f, b, b, b,
+    b, b, b, b, b, b, b, b,
+    b, b, b, b, b, b, b, b
+]
+
 def arrow_pattern():
     up = [
         b, b, b, b, b, b, b, b,
@@ -46,6 +57,7 @@ while True:
                 sense.set_rotation(90)
                 sense.set_pixels(pixels)
                 sense.flip_h()# Right arrow
+
 
 
             # Wait a while and then clear the screen
